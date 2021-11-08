@@ -534,14 +534,14 @@ nav{
     background-color:hsla(0,0%,50%, 0.2);
   }
   
-@media(max-width:768px){
-  .table{
-    overflow-x:scroll;
-  }
-  td{
-    font-size:0.75rem;
+td{
+    font-size:0.7rem;
+    padding: 0.8rem 1rem;
   }
   
+  .tab-content .container{
+    overflow-x:scroll;
+  }
   
   
 }
