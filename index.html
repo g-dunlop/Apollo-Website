@@ -83,9 +83,9 @@
       <section class="contact-us">
         <div class="container">
           <h1> Find Out More</h1>
-            <form action="" method="post">
-              <input type="text" placeholder="Your name" required>
-              <input type="email" placeholder="Enter your email" required>
+            <form action="contact-form-handler.php" name="contact-form" method="post">
+              <input type="text" name="name" placeholder="Your name" required>
+              <input type="email" name="email" placeholder="Enter your email" required>
               <select id="course" name="course" placeholder="course" required>
                 <option value="" disabled selected>Which course are you interested in?</option>
                 <option>CELTA</option>
@@ -93,10 +93,18 @@
                 <option>IHCYLT</option>
                 <option>Train the Trainer</option>
               </select>
-              <button type="submit" class="button-1">Submit</button>
+              <button type="submit" value="submit" class="button-1">Submit</button>
             </form>
         </div>
       </section>
+
+      <script language="JavaScript">
+        var frmvalidator  = new Validator("contactform");
+        frmvalidator.addValidation("name","req","Please provide your name");
+        frmvalidator.addValidation("email","req","Please provide your email");
+        frmvalidator.addValidation("email","email",
+          "Please enter a valid email address");
+        </script>
       
       <section id="who-we-are">
         <div class="container">
@@ -124,7 +132,7 @@
             <h3>Experienced Teachers </h3>
             <img src="./Images/delta.png">            
             
-            <p>Take your teaching to the next level with the <strong><em>Cambridge DELTA</em></strong>, or help others improve their teaching by taking the <em>Cambridge Train the Trainer</em> course.</p>
+            <p>Take your teaching to the next level with the <strong><em>Cambridge DELTA</em></strong>, or help others improve their teaching by taking the <strong><em>Cambridge Train the Trainer</em></strong> course.</p>
             <button class="read-more-button"><a class="read-more button-1" href="#">More Info</a></button>
           </div>
           
@@ -356,43 +364,43 @@
         
         <div class="container">
         
-        <p>Our trainers are all accredited by the University of Cambridge English Language Assessment. They are all very experienced English teachers and IH tutors have typically worked in a variety of settings and locations. All our trainers are committed to teacher development and have an active, ongoing interest in this field.
-        </p>
+          <p>Our trainers are all accredited by the University of Cambridge English Language Assessment. They are all very experienced English teachers and IH tutors have typically worked in a variety of settings and locations. All our trainers are committed to teacher development and have an active, ongoing interest in this field.
+          </p>
         
-        <div class="trainer-pics">
-          <div class="trainer-pic" id="jon"><h5 class="trainer-name">Jon</h5><img class="trainer-pic" src="./Images/Trainers/Jon.jpg"><br></div>
-          <div class="trainer-pic" id="graeme"><h5 class="trainer-name">Graeme</h5><img class="trainer-pic" src="./Images/Trainers/Graeme-photo.jpg"><br></div>
-          <div class="trainer-pic" id="michael"><h5 class="trainer-name">Michael</h5><img class="trainer-pic" src="./Images/Trainers/Michael.jpg"><br></div>
-          <div class="trainer-pic" id="laurie"><h5 class="trainer-name">Laurie</h5><img class="trainer-pic" src="./Images/Trainers/Laurie.jpg"><br></div>
-        </div>
+          <div class="trainer-pics">
+            <div class="trainer-pic" id="jon"><h5 class="trainer-name">Jon</h5><img class="trainer-pic" src="./Images/Trainers/Jon.jpg"><br></div>
+            <div class="trainer-pic" id="graeme"><h5 class="trainer-name">Graeme</h5><img class="trainer-pic" src="./Images/Trainers/Graeme-photo.jpg"><br></div>
+            <div class="trainer-pic" id="michael"><h5 class="trainer-name">Michael</h5><img class="trainer-pic" src="./Images/Trainers/Michael.jpg"><br></div>
+            <div class="trainer-pic" id="laurie"><h5 class="trainer-name">Laurie</h5><img class="trainer-pic" src="./Images/Trainers/Laurie.jpg"><br></div>
+          </div>
        
-       <div class="trainer-bios">
-        <div class="trainer-bio" id="jon-bio">
-         <h3 id="jon-rose">Jon Rose (CELTA/DELTA)</h3>
-         <p >Jon Rose is a CELTA/Delta trainer with 30 years’ experience working as a teacher and teacher trainer in Spain, Egypt, the UAE, the US, Australia and Vietnam in academic institutions and private language schools. He has been a Delta trainer since 2004 and CELTA trainer since 1998. He is a Delta Module 2 and Module 3 Assessor.
-          </p>
-         </div>
+          <div class="trainer-bios">
+           <div class="trainer-bio" id="jon-bio">
+            <h3 id="jon-rose">Jon Rose (CELTA/DELTA)</h3>
+            <p >Jon Rose is a CELTA/Delta trainer with 30 years’ experience working as a teacher and teacher trainer in Spain, Egypt, the UAE, the US, Australia and Vietnam in academic institutions and private language schools. He has been a Delta trainer since 2004 and CELTA trainer since 1998. He is a Delta Module 2 and Module 3 Assessor.
+             </p>
+            </div>
         
-         <div class="trainer-bio" id="graeme-bio">
-         <h3 id="graeme-dunlop">Graeme Dunlop (CELTA/IHCYLT)</h3>
-         <p>Graeme is from the UK and has worked in the UK, Russia, Spain, Poland and Vietnam. He has taught General English, one – on – one, business English, Cambridge Main Suite and IELTS exam preparation courses as well as a wide variety of Young Learner courses. He has worked as a senior teacher, academic manager and examiner. As well as CELTA training, Graeme also works as a trainer for the International House Certificate in Teaching Young Learners and Teenagers (IHCYLT).
-          </p>
-         </div>
+            <div class="trainer-bio" id="graeme-bio">
+            <h3 id="graeme-dunlop">Graeme Dunlop (CELTA/IHCYLT)</h3>
+            <p>Graeme is from the UK and has worked in the UK, Russia, Spain, Poland and Vietnam. He has taught General English, one – on – one, business English, Cambridge Main Suite and IELTS exam preparation courses as well as a wide variety of Young Learner courses. He has worked as a senior teacher, academic manager and examiner. As well as CELTA training, Graeme also works as a trainer for the International House Certificate in Teaching Young Learners and Teenagers (IHCYLT).
+             </p>
+            </div>
          
-         <div class="trainer-bio" id="michael-bio">
-         <h3 id="michael-newby">Michael Newby (CELTA/IHCYLT)</h3>
-         <p>Hailing from the UK, Michael has been working in ESL since 2006. He has worked in numerous countries as a teacher, teacher-trainer and manager. Michael has trained on CELTA courses around the world, including Turkey, Dubai, Italy, Malaysia, the USA, South Africa, Botswana, Canada and Germany. Michael is also a Cambridge CELTA Assessor.
-          </p>
-         </div>
+            <div class="trainer-bio" id="michael-bio">
+            <h3 id="michael-newby">Michael Newby (CELTA/IHCYLT)</h3>
+            <p>Hailing from the UK, Michael has been working in ESL since 2006. He has worked in numerous countries as a teacher, teacher-trainer and manager. Michael has trained on CELTA courses around the world, including Turkey, Dubai, Italy, Malaysia, the USA, South Africa, Botswana, Canada and Germany. Michael is also a Cambridge CELTA Assessor.
+             </p>
+            </div>
          
-         <div class="trainer-bio" id="laurie-bio">
-         <h3 id="laurie-miller">Laurie Campbell Miller (CELTA/IHCYLT)</h3>
-         <p>Laurie is from Scotland and has been working in ELT since 2004. She has taught in numerous contexts; VYL,YL, Immersion, EAP, 1-2-1, ESP, Business, Online and TOEFL/Cambridge/IELTS exam prep. She has experience in a variety of roles including management and Content development. She has worked in several different countries such as Indonesia, South Korea, Italy, Saudi Arabia, Japan, The UAE, England and most recently, Vietnam.
-           </p>
-         </div>
+            <div class="trainer-bio" id="laurie-bio">
+            <h3 id="laurie-miller">Laurie Campbell Miller (CELTA/IHCYLT)</h3>
+            <p>Laurie is from Scotland and has been working in ELT since 2004. She has taught in numerous contexts; VYL,YL, Immersion, EAP, 1-2-1, ESP, Business, Online and TOEFL/Cambridge/IELTS exam prep. She has experience in a variety of roles including management and Content development. She has worked in several different countries such as Indonesia, South Korea, Italy, Saudi Arabia, Japan, The UAE, England and most recently, Vietnam.
+              </p>
+            </div>
          
-        </div>
-       </div>
+            </div>
+           </div>
       </section>
       
       <section class="contact-us">
@@ -431,16 +439,16 @@
 
            <div class="card">
               <div class="card-body">
-               <img class="city-pic" src="./Images/Hanoi photo ih.jpg">
                 <h5 class="card-title">Hanoi</h5>
+               <img class="city-pic" src="./Images/Hanoi photo ih.jpg">
                 <p class="card-text">181-183-185 Pho Hue<br> Hai Ba Trung District <br>
                 T: (84.24)7308 8666<br><a href=''>teacher.training@apollo.edu.vn</a></p>
               </div>
              </div>
             <div class="card">
               <div class="card-body">
-                <img class="city-pic" src="./Images/HCMC Photo ih.jpg">
                 <h5 class="card-title">Ho Chi Minh City</h5>
+                <img class="city-pic" src="./Images/HCMC Photo ih.jpg">
                 <p class="card-text">58 Pham Ngoc Thach<br>District 3<br>
                 T: (84.28) 7305 5567<br><a href=''>teacher.training@apollo.edu.vn</a></p>
               </div>
